@@ -4,12 +4,11 @@ from flask_cors import CORS
 
 
 app = Flask(__name__)
-CORS(app)
-app.config.from_object(__name__)
-
-# enable CORS
-CORS(app, resources={r'/*': {'origins': '*'}})
-
+# app.config.from_object(__name__)
+#
+# # enable CORS
+# CORS(app, resources={r'/*': {'origins': '*'}})
+#
 api = Api(app)
 
 

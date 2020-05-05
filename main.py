@@ -8,7 +8,7 @@ def hello():
 
 
 @app.route("/getNames")
-def hello():
+def name():
     return {"name":"veerendra"}
 
 

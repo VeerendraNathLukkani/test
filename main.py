@@ -2,8 +2,12 @@ from flask import Flask
 from flask_restplus import reqparse, abort, Api, Resource
 from flask_cors import CORS
 
+import socket
+print(socket.gethostname())
 
 app = Flask(__name__)
+app.config['SERVER_NAME'] = 'veerendra.azurewebsites.net'
+
 # app.config.from_object(__name__)
 #
 # # enable CORS
@@ -23,4 +27,4 @@ api.add_resource(Hello, '/hello')
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8080, debug=True)
+    app.run(debug=True)

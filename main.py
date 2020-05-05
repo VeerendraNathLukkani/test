@@ -10,6 +10,8 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
+api = Api(app)
+
 
 class Hello(Resource):
     def get(self):
